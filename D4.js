@@ -5,8 +5,8 @@
 function area(l1, l2) {
   return l1 * l2;
 }
-let areaRettangolo = area(5, 6);
-console.log(areaRettangolo);
+const areaRettangolo = area(5, 6);
+console.log("l'area del rettangolo è:" + areaRettangolo);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
