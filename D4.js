@@ -28,14 +28,38 @@ console.log(crazySum(7, 7));
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(num) {
+  const diffAssoluta = Math.abs(
+    num - 19
+  ); /* guardato da internet, ma perchè "-"" ? */
+  if (num > 19) {
+    return diffAssoluta * 3;
+  } else {
+    return diffAssoluta;
+  }
+}
+console.log("Numero inferiore prova:" + crazyDiff(12));
+console.log("Numero Pari prova:" + crazyDiff(19));
+console.log("Numero Maggiore prova:" + crazyDiff(20));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log("non compreso prova:" + boundary(5));
+console.log("se uguale a 20:" + boundary(20));
+console.log("se uguale a 100:" + boundary(100));
+console.log("compreso:" + boundary(88));
+console.log("se 400:" + boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
