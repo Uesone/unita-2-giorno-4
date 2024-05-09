@@ -68,7 +68,7 @@ console.log("se 400:" + boundary(400));
 */
 
 function epify(stringa) {
-  let scritta = "EPICODE";
+  const scritta = "EPICODE";
   for (let i = 0; i < scritta.length; i++) {
     if (stringa[i] !== scritta[i]) {
       return scritta + stringa;
@@ -85,20 +85,43 @@ console.log(epify("EPICODE"));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(numero) {
+  if (numero > 0 && (numero % 3 === 0 || numero % 7 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log("multipo di 3:" + check3and7(12));
+console.log("multiplo di 7" + check3and7(21));
+console.log("non è multiplo ne di 3 ne di 7:" + check3and7(10));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(stringa) {
+  return stringa.split("").reverse().join("");
+}
+console.log(reverseString("EPICODE"));
+console.log(reverseString("prova"));
+console.log(reverseString("AmoRoma"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(stringhe = "Ciao mi chiamo Franco!") {
+  /* mi hanno aiutato, devo capirla. */
+  return stringhe
+    .split("")
+    .map((parole) => parole.charAt(0).toLocaleUpperCase() + parole.slice(1))
+    .join("");
+}
+
+console.log(upperFirst());
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
