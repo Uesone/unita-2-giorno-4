@@ -67,7 +67,18 @@ console.log("se 400:" + boundary(400));
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(stringa) {
+  let scritta = "EPICODE";
+  for (let i = 0; i < scritta.length; i++) {
+    if (stringa[i] !== scritta[i]) {
+      return scritta + stringa;
+    } else {
+      return stringa;
+    }
+  }
+}
+console.log(epify("prova"));
+console.log(epify("EPICODE"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
